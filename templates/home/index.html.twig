@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+	<section id="app" class="container-fluid">
+		<div class="col-12 text-center">
+			<h1 class="h1 my-5">Insta Weather</h1>
+		</div>
+
+		<div class="card col-12 offset-lg-4 col-lg-4 d-flex flex-column justify-content-around align-items-between my-5">
+			<div class="search d-flex">
+				<input type="text" class="text-left pl-5 offset-1 col-10 input-city mt-3 mb-5" placeholder="Saisir une ville">
+				<i class="fas fa-search-location"></i>
+			</div>
+
+			<div class="main-infos d-flex justify-content-between align-items-center">
+
+				<i class="wi wi-day-rain"></i>
+				<div class="temp-infos d-flex justify-content-between align-items-right flex-column">
+
+					<span class="conditions text-right"></span>
+					<span class="temp-celcius temperature text-right"></span>
+					<p class="min-max text-right">
+						<span class="min temperature"></span>/<span class="max temperature"></span>
+					</p>
+					<p class="location">
+						<span class="city"></span>,
+						<span class="country"></span>
+					</p>
+				</div>
+			</div>
+
+			<hr class="seperation" style=" border: 1px solid black; width:100%;">
+
+			<div class="second-infos d-flex justify-content-between align-items-center flex-column">
+				<div class="feel d-flex justify-content-between">
+					<p>Ressentie</p>
+					<span class="feel-like temperature"></span>
+				</div>
+				<div class=" d-flex justify-content-between">
+					<p>Humidité</p>
+					<span class="humidity"></span>
+				</div>
+				<div class="wind d-flex justify-content-between">
+					<p>Vent</p>
+					<span class="wind-speed"></span>
+				</div>
+			</div>
+		</div>
+
+	</section>
+{% endblock %}
